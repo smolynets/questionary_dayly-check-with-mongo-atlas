@@ -39,7 +39,7 @@ def send_to_mongodb(q_list):
 
 
 def get_from_mongodb():
-    query = {"date": str_current_date} # change to previous day
+    query = {"date": str_one_day_before}
     document = collection.find_one(query)
     if document:
         return document["value"]
